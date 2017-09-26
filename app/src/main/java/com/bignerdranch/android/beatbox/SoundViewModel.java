@@ -7,11 +7,11 @@ import android.databinding.Bindable;
  * Created by Gaurav on 25/09/17.
  */
 
-public class SoundViewModel extends BaseObservable{
+public class SoundViewModel extends BaseObservable {
     private Sound mSound;
     private BeatBox mBeatBox;
 
-    public SoundViewModel(BeatBox beatBox){
+    public SoundViewModel(BeatBox beatBox) {
         mBeatBox = beatBox;
     }
 
@@ -25,7 +25,11 @@ public class SoundViewModel extends BaseObservable{
     }
 
     @Bindable
-    public String getTitle(){
+    public String getTitle() {
         return mSound.getName();
+    }
+
+    public void onButtonClicked() {
+        mBeatBox.play(mSound);
     }
 }

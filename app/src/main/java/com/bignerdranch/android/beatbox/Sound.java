@@ -6,6 +6,7 @@ package com.bignerdranch.android.beatbox;
 
 public class Sound {
 
+    private Integer mSoundId;
     private String mAssetPath;
     private String mName;
 
@@ -14,6 +15,14 @@ public class Sound {
         String[] compenets = mAssetPath.split("/");
         String fileName = compenets[compenets.length - 1];
         mName = fileName.replace(".wav","");
+    }
+
+    public Integer getSoundId() {
+        return mSoundId;
+    }
+
+    public void setSoundId(Integer soundId) {
+        mSoundId = soundId;
     }
 
     public String getAssetPath() {
